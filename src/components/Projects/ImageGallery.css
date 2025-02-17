@@ -1,0 +1,51 @@
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    padding-top: 80px; /*Ensure it doesn’t overlap with navbar*/
+  }
+  
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 images per row on large screens */
+    gap: 10px;
+    max-width: 80vw;
+  }
+  
+  .gallery-item {
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .gallery-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .gallery-item:hover {
+    transform: scale(1.05);
+  }
+  
+  .gallery-caption {
+    margin-top: 5px;
+    font-size: 16px;
+    color: #555;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .gallery {
+      grid-template-columns: repeat(2, 1fr); /* 2 images per row on tablets */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .gallery {
+      grid-template-columns: repeat(1, 1fr); /* 1 image per row on mobile */
+    }
+  }
+  

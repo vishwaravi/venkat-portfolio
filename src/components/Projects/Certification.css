@@ -1,0 +1,65 @@
+.certification-container {
+  margin-top: 5%;
+  text-align: center;
+  padding: 20px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.cert-title {
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Default: 3 columns in a row */
+  gap: 20px; /* Remove gaps between items */
+  justify-items: center;
+  width: 100%; /* Ensure grid takes the full width */
+  grid-auto-rows: auto;
+}
+
+.cert-card {
+  width: 100%;
+  max-width: 100%; /* Ensure no extra width for the card */
+  background-color: #f0f0f0;
+  padding: 0; /* Remove padding from the card */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.cert-card:hover {
+  transform: translateY(-5px);
+}
+
+.cert-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover; /* Makes sure the image covers the space */
+}
+
+.cert-name {
+  margin-top: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Media Query for medium screens */
+@media (max-width: 1024px) {
+  .cert-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets and smaller screens */
+  }
+}
+
+/* Media Query for small screens (phones) */
+@media (max-width: 600px) {
+  .cert-grid {
+    grid-template-columns: 1fr; /* 1 column on small screens */
+  }
+}
